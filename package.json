@@ -1,0 +1,15 @@
+{
+    "scripts": {
+        "start": "tsx start.ts"
+    },
+    "dependencies": {
+        "execa": "^7.1.1",
+        "vscode-languageserver-protocol": "^3.17.3",
+        "vscode-uri": "^3.0.7"
+    },
+    "devDependencies": {
+        "@types/node": "latest",
+        "tsx": "latest",
+        "typescript": "latest"
+    }
+}
