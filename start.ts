@@ -18,6 +18,7 @@ const sample = 1; // less for faster, bigger for smooth numbers
     }[] = [
             { name: 'vanilla', deps: ['vue'], version: 'latest' },
             { name: 'ant-design-vue', deps: ['ant-design-vue'], version: 'latest' },
+            { name: 'anu-vue', deps: ['anu-vue'], version: 'latest' },
             { name: 'bootstrap-vue-next', deps: ['bootstrap-vue-next'], version: 'latest' },
             { name: 'element-plus', deps: ['element-plus'], version: 'latest' },
             { name: 'naive-ui', deps: ['naive-ui'], version: 'latest' },
