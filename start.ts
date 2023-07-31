@@ -42,6 +42,7 @@ const sample = 1; // less for faster, bigger for smooth numbers
             { name: 'quasar', deps: ['quasar'], version: 'latest' },
             { name: 'radix-vue', deps: ['radix-vue'], version: 'latest' },
             { name: 'vuetify', deps: ['vuetify'], version: 'latest' },
+            { name: 'vant', deps: ['vant'], version: 'latest' },
 
             // NO TS
             // { name: 'primevue', deps: ['primevue'], version: 'latest' },
