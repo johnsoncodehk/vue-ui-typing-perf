@@ -143,6 +143,10 @@ const sample = 1; // less for faster, bigger for smooth numbers
             let document = await helpers.openDocument('./App.vue', 'vue');
 
             const getActionPos = () => document.positionAt(document.getText().lastIndexOf(`/* __complete__ */`));
+            const doComplete = async () => {
+                const completeResult = await helpers.requestCompletion(document, getActionPos());
+                assert.equal((completeResult as any).items.some(item => item.label === 'watch'), true);
+            };
 
             await helpers.requestCompletion(document, getActionPos()); // ignore first time
 
@@ -150,27 +154,27 @@ const sample = 1; // less for faster, bigger for smooth numbers
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'w');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'watch'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'a');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'watch'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 't');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'watch'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'c');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'watch'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'h');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'watch'), true);
+                    await doComplete();
                 });
 
                 // delete added text
@@ -203,6 +207,10 @@ const sample = 1; // less for faster, bigger for smooth numbers
             let document = await helpers.openDocument('./App.vue', 'vue');
 
             const getActionPos = () => document.positionAt(document.getText().lastIndexOf(`/* __complete__ */`));
+            const doComplete = async () => {
+                const completeResult = await helpers.requestCompletion(document, getActionPos());
+                assert.equal((completeResult as any).items.some(item => item.label === 'props'), true);
+            };
 
             await helpers.requestCompletion(document, getActionPos()); // ignore first time
 
@@ -210,27 +218,27 @@ const sample = 1; // less for faster, bigger for smooth numbers
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'p');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'props'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'r');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'props'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'o');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'props'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 'p');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'props'), true);
+                    await doComplete();
                 });
 
                 await timekeeper(async () => {
                     document = await helpers.editDocument(document, getActionPos(), getActionPos(), 's');
-                    assert.equal((await helpers.requestCompletion(document, getActionPos()) as any).items.some(item => item.label === 'props'), true);
+                    await doComplete();
                 });
 
                 // delete added text
