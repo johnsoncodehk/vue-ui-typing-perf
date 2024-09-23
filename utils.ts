@@ -124,6 +124,7 @@ export async function setup(serversDir: string, pkgs: Record<string,
     function createHelpers(dir: string, connection: protocol.ProtocolConnection) {
         return {
             async initialize(initializationOptions: any) {
+                initializationOptions.vue = { hybridMode: false };
                 const result = await connection.sendRequest('initialize', {
                     rootPath: dir,
                     capabilities: {},

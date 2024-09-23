@@ -9,7 +9,7 @@ const sample = 1; // less for faster, bigger for smooth numbers
 (async () => {
 
     const context = await setup(path.join(__dirname, 'servers'), {
-        'v1.8.8': { npm: '@vue/language-server@1.8.8', bin: './bin/vue-language-server.js' },
+        'v2.1.6': { npm: '@vue/language-server@2.1.6', bin: './bin/vue-language-server.js' },
     });
     const libraries: {
         name: string;
