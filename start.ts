@@ -22,7 +22,7 @@ const sample = 1; // less for faster, bigger for smooth numbers
             { name: 'bootstrap-vue-next', deps: ['bootstrap-vue-next'], version: 'latest' },
             { name: 'element-plus', deps: ['element-plus'], version: 'latest' },
             { name: 'naive-ui', deps: ['naive-ui'], version: 'latest' },
-            { name: 'oku-ui', deps: ['@oku-ui/primitives'], version: 'beta' },
+            { name: 'oku-ui', deps: ['@oku-ui/primitives'], version: 'latest' },
             { name: 'quasar', deps: ['quasar'], version: 'latest' },
             { name: 'radix-vue', deps: ['radix-vue'], version: 'latest' },
             { name: 'vuetify', deps: ['vuetify'], version: 'latest' },
