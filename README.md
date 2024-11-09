@@ -7,6 +7,8 @@ Run `$ pnpm i && npm run start` to generate tsv. (under `temp/`)
 
 # Save Image
 
-`pip3 install pandas matplotlib`
+python3 -m venv .venv
+source .venv/bin/activate
+python3 -m pip install -r requirements.txt
 
 `python3 photo.py` to generate under `temp/`

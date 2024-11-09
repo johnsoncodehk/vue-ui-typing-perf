@@ -18,12 +18,10 @@ for file, title, filename in files:
 
     # Plot each framework
     for framework in frameworks:
-        if framework == 'oku-ui':
-            plt.plot(df.index + 1, df[framework], marker='o', linewidth=2.5, color='darkgreen', label=framework)  # Bold line
-        elif framework == 'radix-vue':
-            plt.plot(df.index + 1, df[framework], marker='o', linewidth=2.5, color='red', label=framework)  # Red line
-        else:
-            plt.plot(df.index + 1, df[framework], marker='o', alpha=0.3, label=framework)  # 40% transparent
+        # if framework == 'oku-ui':
+        #     plt.plot(df.index + 1, df[framework], marker='o', linewidth=2.5, color='darkgreen', label=framework)  # Bold line
+        # else:
+            plt.plot(df.index + 1, df[framework], marker='o', alpha=0.8, label=framework)  # 40% transparent
 
     # Chart details for each plot
     plt.title(title)

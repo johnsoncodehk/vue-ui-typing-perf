@@ -1,6 +1,7 @@
 {
     "scripts": {
-        "start": "tsx start.ts"
+        "start": "tsx start.ts",
+        "generate": "python3 photo.py"
     },
     "dependencies": {
         "execa": "^7.1.1",
@@ -11,5 +12,6 @@
         "@types/node": "latest",
         "tsx": "latest",
         "typescript": "latest"
-    }
+    },
+    "packageManager": "pnpm@9.12.2"
 }
